@@ -1,0 +1,15 @@
+{
+  "id": "group_msg_1",
+  "message_id": "group_msg_1",
+  "wa_id": "group_12345",
+  "from": "919111111111",
+  "participants": [
+    "919111111111",
+    "919222222222",
+    "919333333333"
+  ],
+  "group_name": "Study Group",
+  "text": "Hey team, meeting at 7pm!",
+  "timestamp": "2025-08-02T16:00:00Z",
+  "status": "sent"
+}
