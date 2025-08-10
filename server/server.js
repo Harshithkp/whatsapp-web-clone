@@ -12,7 +12,13 @@ const { Server } = require('socket.io');
 const io = new Server(server, { cors: { origin: '*' } });
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    "https://whatsapp-web-clone-git-main-harshithkps-projects.vercel.app"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(bodyParser.json({ limit: '5mb' }));
 
 // DB connection
@@ -24,6 +30,7 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true 
   .catch(e=> console.error('Mongo connect error', e));
 
 // ====== API ROUTES ======
+
 
 // Get conversation list
 app.get('/api/conversations', async (req,res)=>{
